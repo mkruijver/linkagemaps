@@ -1,0 +1,26 @@
+Description,Description2, RefSeq, Type, Size, Gene, tRNA, rRNA, Other
+Homo sapiens chromosome Y, GRCh38.p14 Primary Assembly., NC_000024.10, chromosome,57227415,66,0,0,1454
+Homo sapiens chromosome X, GRCh38.p14 Primary Assembly., NC_000023.11, chromosome,156040895,848,4,0,17528
+Homo sapiens chromosome 22, GRCh38.p14 Primary Assembly., NC_000022.11, chromosome,50818468,439,1,0,13905
+Homo sapiens chromosome 21, GRCh38.p14 Primary Assembly., NC_000021.9, chromosome,46709983,238,1,12,6772
+Homo sapiens chromosome 20, GRCh38.p14 Primary Assembly., NC_000020.11, chromosome,64444167,537,0,0,15539
+Homo sapiens chromosome 19, GRCh38.p14 Primary Assembly., NC_000019.10, chromosome,58617616,1410,7,0,31138
+Homo sapiens chromosome 18, GRCh38.p14 Primary Assembly., NC_000018.10, chromosome,80373285,268,1,0,9141
+Homo sapiens chromosome 17, GRCh38.p14 Primary Assembly., NC_000017.11, chromosome,83257441,1157,33,0,34697
+Homo sapiens chromosome 16, GRCh38.p14 Primary Assembly., NC_000016.10, chromosome,90338345,847,26,0,24472
+Homo sapiens chromosome 15, GRCh38.p14 Primary Assembly., NC_000015.10, chromosome,101991189,601,9,0,19323
+Homo sapiens chromosome 14, GRCh38.p14 Primary Assembly., NC_000014.9, chromosome,107043718,603,19,0,18040
+Homo sapiens chromosome 13, GRCh38.p14 Primary Assembly., NC_000013.11, chromosome,114364328,337,4,0,11019
+Homo sapiens chromosome 12, GRCh38.p14 Primary Assembly., NC_000012.12, chromosome,133275309,1023,9,0,31130
+Homo sapiens chromosome 11, GRCh38.p14 Primary Assembly., NC_000011.10, chromosome,135086622,1298,13,0,34496
+Homo sapiens chromosome 10, GRCh38.p14 Primary Assembly., NC_000010.11, chromosome,133797422,732,3,0,24996
+Homo sapiens chromosome 9, GRCh38.p14 Primary Assembly., NC_000009.12, chromosome,138394717,776,2,0,24255
+Homo sapiens chromosome 8, GRCh38.p14 Primary Assembly., NC_000008.11, chromosome,145138636,705,5,0,23788
+Homo sapiens chromosome 7, GRCh38.p14 Primary Assembly., NC_000007.14, chromosome,159345973,935,22,0,28446
+Homo sapiens chromosome 6, GRCh38.p14 Primary Assembly., NC_000006.12, chromosome,170805979,1044,154,0,31398
+Homo sapiens chromosome 5, GRCh38.p14 Primary Assembly., NC_000005.10, chromosome,181538259,894,18,0,29181
+Homo sapiens chromosome 4, GRCh38.p14 Primary Assembly., NC_000004.12, chromosome,190214555,764,1,0,24395
+Homo sapiens chromosome 3, GRCh38.p14 Primary Assembly., NC_000003.12, chromosome,198295559,1064,4,0,35729
+Homo sapiens chromosome 2, GRCh38.p14 Primary Assembly., NC_000002.12, chromosome,242193529,1254,8,0,43541
+Homo sapiens chromosome 1, GRCh38.p14 Primary Assembly., NC_000001.11, chromosome,248956422,2050,85,17,57387
+Homo sapiens mitochondrion, complete genome., NC_012920.1, mitochondrial_chromosome,16569,13,22,2,2
