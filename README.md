@@ -8,6 +8,22 @@ Currently included:
 
 - **ForenSeq DNA Signature Prep** autosomal STRs and identity SNPs.
 
+## Data sources and coordinate conventions
+
+The sex-averaged recombination map is taken from the supplementary data of Halldórsson et al. (2019). The file `data-raw/aau1043_datas3.gz` is included in this repository to make generation of the linkage maps reproducible.
+
+Physical positions of SNP loci are obtained from the [NCBI dbSNP](https://www.ncbi.nlm.nih.gov/snp/) Variation API. The RefSeq accession returned by dbSNP is checked against the GRCh38 reference sequences in `GRCh38.p14.csv`.
+
+The `position` field returned by the dbSNP API is zero-based. It is therefore converted to a conventional one-based GRCh38 coordinate by adding 1 before the position is stored in `positions/SNP_positions.csv`.
+
+Physical positions of STR loci are obtained from [NIST STRBase](https://strbase.nist.gov/) using the [`STRBaseclient`](https://github.com/mkruijver/STRBaseclient) R package. The script used to retrieve these positions is included as `positions/find_STR_positions.R`.
+
+### SNP coordinate correction
+
+The original ForenSeq linkage map released on 14 July 2026 (`v140726`) used the dbSNP API `position` field directly and therefore recorded SNP physical positions one base lower than their corresponding one-based GRCh38 coordinates.
+
+Subsequent maps correct this by adding 1 to the positions returned by the dbSNP API. The correction has only a very small effect on the interpolated genetic positions, but ensures that the physical coordinates use the intended convention. The `v140726` release is retained unchanged so that the historical map remains reproducible.
+
 ## Repository structure
 
 - `generate_maps.R` — generates linkage-map CSV files.
@@ -21,4 +37,6 @@ Run `generate_maps.R` to generate the linkage-map CSV file. Currently only panel
 
 ## Licence
 
-Note that the file `data-raw/halldorsson2019/aau1043_datas3.gz` is supplementary data from https://doi.org/10.1126/science.aau1043. The file is included to make generation of the linkage maps reproducible. It is third-party data and is not covered by this repository's MIT licence.
+The code in this repository is released under the MIT licence.
+
+Note that the file `data-raw/aau1043_datas3.gz` is supplementary data from https://doi.org/10.1126/science.aau1043. The file is included to make generation of the linkage maps reproducible. It is third-party data and is not covered by this repository's MIT licence.
