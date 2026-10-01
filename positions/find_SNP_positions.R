@@ -13,7 +13,10 @@ get_position <- function(snp_name){
   content <- httr::content(httr::GET(endpoint), encoding = "UTF-8")
 
   id <- content$present_obs_movements[[1]]$allele_in_cur_release$seq_id
-  pos <- content$present_obs_movements[[1]]$allele_in_cur_release$position
+
+  # dbSNP Variation API positions are 0-based
+  # we convert to 1-based GRCh38 coordinates
+  pos <- content$present_obs_movements[[1]]$allele_in_cur_release$position + 1L
 
   data.frame(snp = snp_name, id = id, pos = pos)
 }

@@ -35,8 +35,8 @@ for (i in seq_along(decode_map_split)){
 
 # Two problems
 #  Chromosome     Locus       PosBp
-#  2              rs876724    114973
-#  11             rs2076848   134797651
+#  2              rs876724    114974
+#  11             rs2076848   134797652
 
 # rs876724 sits at the start of Chromosome 2 before the start of the decode map
 # rs2076848 sits at the end of Chromosome 11 after the end of the decode map
@@ -112,16 +112,17 @@ linkage_map_df_shifted <- linkage_map_df
 linkage_map_df_shifted$PoscM[linkage_map_df$Chromosome==2] <-
   linkage_map_df$PoscM[linkage_map_df$Chromosome==2] + 1
 
-linkage_map_07_2026 <- data.frame(Chromosome = linkage_map_df_shifted$Chromosome,
+linkage_map <- data.frame(Chromosome = linkage_map_df_shifted$Chromosome,
                                   Locus = linkage_map_df_shifted$Locus,
                                   `Position (cM)` = linkage_map_df_shifted$PoscM, check.names = FALSE)
 
 # add spaces to Penta D/E locus names
-linkage_map_07_2026$Locus <- gsub(pattern = "PentaE",
-                                  replacement = "Penta E", linkage_map_07_2026$Locus)
-linkage_map_07_2026$Locus <- gsub(pattern = "PentaD",
-                                  replacement = "Penta D", linkage_map_07_2026$Locus)
+linkage_map$Locus <- gsub(pattern = "PentaE",
+                                  replacement = "Penta E", linkage_map$Locus)
+linkage_map$Locus <- gsub(pattern = "PentaD",
+                                  replacement = "Penta D", linkage_map$Locus)
 
 
-readr::write_csv(linkage_map_07_2026, file = "maps/ForenSeq DNA Sig Autosomal STR iSNP_14072026.csv")
+readr::write_csv(linkage_map,
+                 file = "maps/ForenSeq DNA Sig Autosomal STR iSNP_01102026.csv")
 
