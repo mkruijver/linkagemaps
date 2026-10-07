@@ -18,6 +18,9 @@ The `position` field returned by the dbSNP API is zero-based. It is therefore co
 
 Physical positions of STR loci are obtained from [NIST STRBase](https://strbase.nist.gov/) using the [`STRBaseclient`](https://github.com/mkruijver/STRBaseclient) R package. The script used to retrieve these positions is included as `positions/find_STR_positions.R`.
 
+For STRs, the physical position used is the midpoint of the GRCh38 repeat-region 
+coordinates from STRBase. Earlier maps used the STR start instead of the midpoint.
+
 ### SNP coordinate correction
 
 The original ForenSeq linkage map released on 14 July 2026 (`v140726`) used the dbSNP API `position` field directly and therefore recorded SNP physical positions one base lower than their corresponding one-based GRCh38 coordinates.

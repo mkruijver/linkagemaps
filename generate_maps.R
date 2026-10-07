@@ -88,12 +88,15 @@ panel_name <- "ForenSeq DNA Sig Autosomal STR iSNP"
 df_panel <- readr::read_csv(paste0("panels/", panel_name, ".csv"))
 
 str <- str[str$locus %in% df_panel$Locus,]
+str$midpoint <- (str$start + str$end) / 2
+
 snp <- snp[snp$snp %in% df_panel$Locus,]
+
 
 # combine STRs and SNPs in one DataFrame
 linkage_map_df <- rbind(data.frame(Chromosome = str$chromosome,
                                    Locus = str$locus,
-                                   PosBp = str$start),
+                                   PosBp = str$midpoint),
                         data.frame(Chromosome = snp$chromosome,
                                    Locus = snp$snp,
                                    PosBp = snp$pos))
@@ -124,5 +127,5 @@ linkage_map$Locus <- gsub(pattern = "PentaD",
 
 
 readr::write_csv(linkage_map,
-                 file = "maps/ForenSeq DNA Sig Autosomal STR iSNP_01102026.csv")
+                 file = "maps/ForenSeq DNA Sig Autosomal STR iSNP_07102026.csv")
 
