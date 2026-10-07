@@ -23,8 +23,7 @@ forenseq_STRs <- c("D1S1656", "TPOX", "D2S441", "D2S1338", "D3S1358",
                    "D4S2408", "FGA", "D5S818", "CSF1PO", "D6S1043", "D7S820", "D8S1179",
                    "D9S1122", "D10S1248", "TH01", "vWA", "D12S391", "D13S317", "PentaE",
                    "D16S539", "D17S1301", "D18S51", "D19S433", "D20S482", "D21S11",
-                   "PentaD", "D22S1045")
-#                   ,"SE33") will be added in an updated version of the map
+                   "PentaD", "D22S1045" ,"SE33")
 
 panel_name <- "ForenSeq DNA Sig Autosomal STR iSNP"
 
